@@ -18,6 +18,9 @@ public class SequenceManager : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.OnGameWin += OnGameWin;
+        GameManager.Instance.OnGameLose += OnGameLose;
+        GameManager.Instance.OnGameOver += OnGameOver;
         UIManager.Instance.Show<MainMenuScreen>();
     }
 
@@ -44,9 +47,7 @@ public class SequenceManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameManager.Instance.OnGameWin += OnGameWin;
-        GameManager.Instance.OnGameLose += OnGameLose;
-        GameManager.Instance.OnGameOver += OnGameOver;
+      
     }
 
     private void OnDisable()
