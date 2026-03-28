@@ -1,0 +1,4 @@
+repository "PoliceAndThief/PoliceAndThief@1374454623568@cloud"
+  path "/"
+    br "/main"
+    co "/main"
